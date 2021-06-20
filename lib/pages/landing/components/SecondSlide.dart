@@ -42,7 +42,7 @@ class SecondSlide extends StatelessWidget {
                     height: 60,
                   ),
                   Text(
-                    "Live Talk With a Patient",
+                    "Live Talk With Patients",
                     style: GoogleFonts.lato(
                       fontSize: 25,
                       color: Colors.black,

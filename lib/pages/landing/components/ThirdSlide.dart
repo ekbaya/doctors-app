@@ -39,7 +39,7 @@ class ThirdSlide extends StatelessWidget {
                child: Column(
                 children: [
                   SizedBox(height: 60,),
-                  Text("You Chat With a Patient", style: GoogleFonts.lato(
+                  Text("You Chat With Patients", style: GoogleFonts.lato(
                       fontSize: 25,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
