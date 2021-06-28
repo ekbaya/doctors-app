@@ -1,4 +1,6 @@
 import 'package:doctors_app/config/strings.dart/Strings.dart';
+import 'package:doctors_app/pages/home/HomePage.dart';
+import 'package:doctors_app/pages/login/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -36,33 +38,54 @@ class ThirdSlide extends StatelessWidget {
                   topRight: Radius.circular(30),
                 ),
               ),
-               child: Column(
+              child: Column(
                 children: [
-                  SizedBox(height: 60,),
-                  Text("You Can Chat With Patients", style: GoogleFonts.lato(
+                  SizedBox(
+                    height: 60,
+                  ),
+                  Text(
+                    "You Can Chat With Patients",
+                    style: GoogleFonts.lato(
                       fontSize: 25,
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
-                    ),),
-                  SizedBox(height: 20,),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Text(slider_3_desc_text),
                   ),
-                  SizedBox(height: 30,),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(10)
+                  SizedBox(
+                    height: 30,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 30, vertical: 15),
+                        child: Text(
+                          "GET STARTED",
+                          style: GoogleFonts.lato(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
                     ),
-                    child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                    child: Text("GET STARTED", style: GoogleFonts.lato(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),),
-                  )),
+                  ),
                 ],
               ),
             ),
